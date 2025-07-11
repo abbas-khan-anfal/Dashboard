@@ -1,0 +1,386 @@
+:root
+{
+    --black-color : #000000;
+    --blue-color : #005CE6;
+    --orange-color : #FCA311;
+    --light-orange-color : #FFB82A;
+    --pink-color : #CC28B4;
+    --light-pink-color : #D987CD;
+    --grey-color : #ABABAB;
+    --high-grey-color : #e3e3e3;
+    --low-grey-color : #f0f0f0;
+    --white-color : #FFFFFF;
+}
+.dashboard aside
+{
+    height: 100vh;
+    width: 15%; 
+    background-color: var(--white-color);
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    border-right: 1px solid var(--high-grey-color);
+}
+.dashboard aside .sec1
+{
+    height: 90%;
+    /* background-color: rgb(23, 23, 23); */
+    overflow-y: auto;
+}
+.dashboard aside .sec1 .logoDiv
+{
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* border-bottom: 1px solid var(--grey-color); */
+}
+.dashboard aside .sec1 img
+{
+    height: 100%;
+    width: 150px;
+    object-fit : contain;
+}
+.dashboard aside .sec1 ul
+{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+}
+.dashboard aside .sec1 ul li
+{
+    display: block;
+    list-style-type: none;
+}
+.dashboard aside .sec1 ul li a
+{
+    text-decoration: none;
+    padding: 8px 5px;
+    color: var(--black-color);
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    border-radius: 5px;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+.dashboard aside .sec1 ul li a:hover
+{
+    background-color: var(--high-grey-color);
+}
+.dashboard aside .sec1 ul li a.active
+{
+    background-color: var(--blue-color);
+    font-weight: 600;
+    color: white;
+}
+.dashboard aside .sec1 ul li a:active
+{
+    background-color: var(--high-grey-color);
+}
+.dashboard aside .sec1 .dashlinkIcon
+{
+    margin: 0px 15px 0px 5px;
+}
+/* ========dropdown=========== */
+.dashboard .productDropDown
+{
+    background-color: var(--low-grey-color);
+    display: none;
+    border-radius: 5px;
+    padding: 2px;
+}
+.dashboard .productDropDown.show
+{
+    display: block;
+}
+.dashboard .productDropDown a
+{
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--black-color);
+    font-weight: 500;
+    display: block;
+    align-items: center;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.dashboard .productDropDown a.active
+{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.dashboard aside .sec2
+{
+    height: 10%;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 7px;
+    border-top: 1px solid var(--high-grey-color);
+}
+.dashboard aside .sec2 button
+{
+    background-color: transparent;
+    color: var(--black-color);
+    font-weight: 500;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 8px 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.dashboard aside .sec2 button:hover
+{
+    background-color: var(--high-grey-color);
+}
+.dashboard aside .sec2 button:active
+{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+.dashboard aside .sec2 button .dashlinkIcon
+{
+    margin: 0px 15px 0px 5px;
+}
+
+/* =======main======== */
+
+.dashboard main
+{
+    height: 100vh;
+    width: 85%;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.dashboard main nav
+{
+    width: 100%;
+    height: 10%;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-bottom: 1px solid var(--high-grey-color);
+}
+.dashboard main nav .dashboardHeadingDiv h5
+{
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: var(--black-color);
+}
+/* ===========dashboard nav open and close btn========== */
+/* .dashboard main nav .dashboardHeadingDiv .dashOpenBtn
+{
+    margin-right: 10px;
+} */
+.dashboard main nav .dashboardHeadingDiv .dashOpenBtn,.dashboard aside .sec1 .dashCloseBtn
+{
+    margin-right: 5px;
+    border: none;
+    background-color: var(--high-grey-color);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    font-weight: 600;
+    transition: 0.4s;
+    display: none;
+}
+.dashboard main nav .dashboardHeadingDiv .dashOpenBtn:active,.dashboard aside .sec1 .dashCloseBtn:active
+{
+    opacity: 0.1;
+}
+
+
+/* ================= */
+.dashboardDropdown .dropdown-menu a
+{
+    color: var(--black-color);
+    font-weight: 500;
+}
+.dashboardDropdown .dropdown-menu a:hover
+{
+    background-color: var(--high-grey-color);
+}
+.dashboard main nav .dropDownBtn
+{
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid var(--black-color);
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+}
+.dashboard main nav .dropDownBtn img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.dashboard main section
+{
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    background-color: var(--white-color);
+}
+.dashsingleproduct p
+{
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.dashsingleproduct img
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid var(--grey-color);
+    margin: 0px 5px;
+}
+/* =====dashboard back button=== */
+.dashBackBtn
+{
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    color: var(--black-color);
+    background-color: var(--low-grey-color);
+    font-size: 20px;
+    transition: all 0.2s;
+    margin-right: 10px;
+}
+.dashBackBtn:active
+{
+    background-color: var(--high-grey-color);
+}
+
+/* dashboard home */
+.dashboardHome .mainCard
+{
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--black-color);
+}
+.dashboardHome .card1 {background-color: var(--high-grey-color);}
+.dashboardHome .card2 {background-color: var(--high-grey-color);}
+.dashboardHome .card3 {background-color: var(--high-grey-color);}
+.dashboardHome .card4 {background-color: var(--high-grey-color);}
+.dashboardHome .card5 {background-color: var(--light-orange-color);}
+.dashboardHome .card6 {background-color: var(--light-orange-color);}
+.dashboardHome .card7 {background-color: var(--light-orange-color);}
+.dashboardHome .card8 {background-color: var(--light-orange-color);}
+
+.dashboardHome .mainCard h6
+{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--black-color);
+}
+.dashboardHome .mainCard h1
+{
+    font-size: 45px;
+    margin-bottom: 0px;
+}
+.dashboardHome .chatCard
+{
+    border: none;
+    margin-bottom: 20px;
+}
+.dashboardHome .chatCard .h5_h
+{
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* every dashboard box border */
+.dashBox
+{
+    background-color: var(--white-color);
+    padding: 15px 5px;
+    border: 1px solid var(--high-grey-color);
+}
+
+
+/* media query */
+@media(max-width: 992px)
+{
+    .dashboard aside
+    {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        transition: all 0.5s;
+        z-index: 1100;
+    }
+    .dashboard aside.show
+    {
+        left: 0;
+    }
+    .dashboard main
+    {
+        width: 100%;
+    }
+    .dashboard main nav .dashboardHeadingDiv .dashOpenBtn,.dashboard aside .sec1 .dashCloseBtn
+    {
+        display: inline-block;
+    }
+    .navBackground
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(179, 179, 179, 0.6);
+        z-index: 1000;
+        display: none;
+    }
+    .navBackground.show
+    {
+        display: block;
+    }
+
+}
+/* mobile media query */
+@media only screen and (min-width: 200px) and (max-width: 567px)
+{
+    .dashboard aside
+    {
+        width: 80%;
+    }
+}
+/* tablet media query */
+@media only screen and (min-width: 568px) and (max-width: 992px)
+{
+    .dashboard aside
+    {
+        width: 30%;
+    }
+}

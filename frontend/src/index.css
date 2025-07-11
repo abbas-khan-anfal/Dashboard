@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Noto Sans", serif;
+}
+:root
+{
+    --black-color : #000000;
+    --blue-color : #005CE6;
+    --orange-color : #FCA311;
+    --light-orange-color : #FFB82A;
+    --pink-color : #CC28B4;
+    --light-pink-color : #D987CD;
+    --grey-color : #ABABAB;
+    --high-grey-color : #e3e3e3;
+    --low-grey-color : #f0f0f0;
+    --white-color : #FFFFFF;
+}
+
+.dashboardForm
+{
+    background-color: var(--white-color);
+    padding: 15px;
+    border: 1px solid var(--high-grey-color);
+}
+.boxShadow table td
+{
+    background-color: transparent;
+}
+.boxShadow table th
+{
+    background-color: var(--high-grey-color);
+    color: var(--black-color);
+}
+.label
+{
+    font-size: 15px;
+    color: var(--black-color);
+    font-weight: 500;
+}
+.inputField
+{
+    padding: 7px;
+    border: none;
+    outline: 1px solid var(--grey-color);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.inputField:focus
+{
+    outline: 2px solid var(--black-color);
+}
+.selectBox option
+{
+    background-color: var(--low-grey-color);
+    color: var(--black-color);
+    font-size: 18px;
+}
+.inputFieldImg
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid var(--grey-color);
+    display: block;
+    margin: 5px 0px;
+    object-fit: cover;
+}
+.lg_btn,.md_btn,.sm_btn
+{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lg_btn:active,.md_btn:active,.sm_btn:active
+{
+    opacity: 0.1;
+}
+.lg_btn:disabled,.md_btn:disabled,.sm_btn:disabled
+{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.lg_btn
+{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+.md_btn
+{
+    padding: 10px 25px;
+}
+.sm_btn
+{
+    padding: 5px 20px;
+    font-size: 15px;
+}
+.h2_h
+{
+    font-size: 30px;
+    font-weight: 500;
+}
+.h4_h
+{
+    font-size: 22px;
+    font-weight: 600;
+}
+.h5_h
+{
+    font-size: 19px;
+    font-weight: 600;
+}
+.p1,.p2,.p3
+{
+    color: #000000;
+    margin-bottom: 0px;
+}
+.p1
+{
+    font-size: 14px;
+}
+.p2
+{
+    font-size: 16px;
+}
+.p3
+{
+    font-size: 18px;
+}
+.anchorBtn1
+{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--blue-color);
+}
+
+/* ====pagination===== */
+.pagination .page-link
+{
+    background-color: var(--low-grey-color);
+    color: var(--black-color);
+}
+.pagination .page-link:hover
+{
+    background-color: var(--high-grey-color);
+    color: var(--black-color);
+}
+.pagination .page-link.active
+{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: 1px solid var(--black-color);
+    font-weight: 600;
+}
+.pagination .page-link:active
+{
+    opacity: 0.4;
+}
+.pagination .page-link.disabled
+{
+    background-color: var(--black-color);
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    color: var(--white-color);
+}
+
+
+/* ==table btn== */
+.viewBtn,.editBtn,.deleteBtn
+{
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: transparent;
+}
+.editBtn
+{
+    color: darkgreen;
+}
+.deleteBtn
+{
+    color: darkred;
+}
