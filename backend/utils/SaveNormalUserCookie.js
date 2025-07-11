@@ -7,6 +7,8 @@ const SaveUserCookie = (res, userId, message, statusCode = 200) => {
 
     res.status(statusCode).cookie("user_token", token, {
         httpOnly: true,
+        secure: true, // Required for HTTPS
+        sameSite: 'None', // Required for cross-site cookies
         maxAge: 10 * 24 * 60 * 60 * 1000,
     }).json({
         success: true,
