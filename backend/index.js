@@ -36,7 +36,7 @@ app.use(express.json());
 
 // for vercel deployment
 app.use(cors({
-    origin: 'https://dashboard-frontend-two-drab.vercel.app/',
+    origin: 'https://dashboard-frontend-two-drab.vercel.app',
     methods : ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
