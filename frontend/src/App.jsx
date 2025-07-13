@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import Admin from './admin/Admin';
 import AuthContext from './context/AuthProvider/AuthContext';
 import { Toaster } from 'react-hot-toast';
+import AppHome from './pages/Home/AppHome';
 
 const App = () => {
   const navigate = useNavigate();
@@ -12,9 +13,7 @@ const App = () => {
       <Toaster />
       
       <Routes>
-        <Route path="/" element={<div>
-          <button onClick={() => navigate('/admin')}>Go To Dashboard</button>
-        </div>} />
+        <Route path="/" element={<AppHome />} />
         <Route path="/admin/*" element={<Admin/>} />
         <Route path="*" element={<div>Error 404 : page not found!</div>} />
       </Routes>
