@@ -1,17 +1,20 @@
 import React, { useContext } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Admin from './admin/Admin';
 import AuthContext from './context/AuthProvider/AuthContext';
 import { Toaster } from 'react-hot-toast';
 
 const App = () => {
+  const navigate = useNavigate();
 
   return (
     <Router>
       <Toaster />
       
       <Routes>
-        <Route path="/" element={<div>Dashboard App</div>} />
+        <Route path="/" element={<div>
+          <button onClick={() => navigate('/admin')}>Go To Dashboard</button>
+        </div>} />
         <Route path="/admin/*" element={<Admin/>} />
         <Route path="*" element={<div>Error 404 : page not found!</div>} />
       </Routes>
